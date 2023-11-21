@@ -8,6 +8,7 @@ import { RiImageAddLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
 
 import "./header.css"
+import userPicture from "../../assets/images/userPicture.jpg"
 
 export const User = () => {
   const user = true
@@ -15,20 +16,22 @@ export const User = () => {
   const close = () => {
     setProfileOpen(false)
   }
+
+  // 'https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600'
   return (
     <>
       <div className='profile'>
         {user ? (
           <>
             <button className='img' onClick={() => setProfileOpen(!profileOpen)}>
-              <img src='https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600' alt='' />
+              <img src={userPicture} alt='' />
             </button>
             {profileOpen && (
               <div className='openProfile boxItems' onClick={close}>
                 <Link to='/account'>
                   <div className='image'>
                     <div className='img'>
-                      <img src='https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600' alt='' />
+                      <img src={userPicture} alt='' />
                     </div>
                     <div className='text'>
                       <h3>Paul Dutu</h3>

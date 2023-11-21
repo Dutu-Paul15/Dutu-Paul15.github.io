@@ -4,6 +4,7 @@ import "./header.css"
 import { User } from "./User"
 import { nav } from "../../assets/data/data"
 import { Link } from "react-router-dom"
+import DarkMode from "../DarkMode/DarkMode"
 
 export const Header = () => {
    window.addEventListener("scroll", function () {
@@ -16,8 +17,9 @@ export const Header = () => {
         <div className='scontainer flex'>
           <div className='logo'>
             <img src={logo} alt='logo' width='100px'/>
-              <h1>BooksBlog</h1>
+            <h1>BooksBlog</h1>
           </div>
+          
           <nav>
             <ul>
               {nav.map((link) => (
@@ -27,7 +29,10 @@ export const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className='account flexCenter'>
+          <div className='account'>
+            <div className="accountChild">
+              <DarkMode />
+            </div>
             <User />
           </div>
         </div>

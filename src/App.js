@@ -10,14 +10,12 @@ import { DetailsPages1} from "./pages/details/DetailsPages1";
 import { Account } from "./pages/account/Account";
 import { Create } from "./components/create/Create";
 import { Contact } from "./pages/contact/Contact";
-import DarkMode from "./components/DarkMode/DarkMode";
 
 const App = () => {
   return (
     <>
       <Router>
         <Header />
-        <DarkMode />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
